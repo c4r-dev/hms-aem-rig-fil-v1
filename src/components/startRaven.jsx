@@ -1,9 +1,6 @@
-timport { ReactComponent as Raven4 } from '../assets/ravens_dots_and_clouds/raven4.svg';
-import "./range-slider.css"
+import { ReactComponent as Raven4 } from '../assets/files.svg';
 
-function ShowResults() {
-
-    let guess = sessionStorage.getItem("guess")
+export default function StartRaven() {
 
     return (
 
@@ -34,4 +31,3 @@ function ShowResults() {
 }
 
 
-export default ShowResults;
