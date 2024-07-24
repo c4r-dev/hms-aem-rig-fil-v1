@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-import { ReactComponent as Raven4 } from '../assets/files.svg';
+import { ReactComponent as Raven4 } from '../assets/files-scattered.svg';
 
 export default function StartRaven() {
 
     const navigate = useNavigate();
 
     const submitContinueClick = () => {
-      navigate("/welcomePage")
+      navigate("/welcome")
     }
 
     return (
@@ -15,8 +15,11 @@ export default function StartRaven() {
         <>
             <div>
                 <h1>Rigor Files</h1>
-                <p><h2>Select a lab scenario to explore! You will examine
-                    your chosen case study for potential risks of un-masking.</h2></p>
+                <h2>Welcome to The Rigor Files</h2>
+                <h2>1. Discuss the case study.</h2>
+                <h2>2. Capture ideas and questions.</h2>
+                <p><h2>3. Convert those thoughts into a reference tool
+                    for future self-assessment of your own experiments.</h2></p>
             </div>
             <input
                 type="button"
