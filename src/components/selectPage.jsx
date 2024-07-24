@@ -18,6 +18,7 @@ export default function StartRaven() {
                 <p><h2>SELECT A LAB SCENARIO TO EXPLORE! YOU WILL EXAMINE
                     YOUR CHOSEN CASE STUDY FOR POTENTIAL RISKS OF UN-MASKING.</h2></p>
             </div>
+            
             <input
                 type="button"
                 onClick={submitContinueClick}

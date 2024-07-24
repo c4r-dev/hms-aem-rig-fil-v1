@@ -14,7 +14,7 @@ export default function StartRaven() {
 
         <>
             <div>
-                <h1>Rigor Files</h1>
+                <h1>RIGOR FILES</h1>
                 <p><h2>Select a lab scenario to explore! You will examine
                     your chosen case study for potential risks of un-masking.</h2></p>
             </div>

@@ -14,7 +14,7 @@ export default function StartRaven() {
 
         <>
             <div>
-                <h1>Rigor Files</h1>
+                <h1>RIGOR FILES</h1>
                 <h2>Welcome to The Rigor Files</h2>
                 <h2>1. Discuss the case study.</h2>
                 <h2>2. Capture ideas and questions.</h2>
