@@ -8,7 +8,7 @@ export default function StartRaven() {
 
 
     const submitStart1Click = () => {
-        navigate("/")
+        navigate("/clinicalTrial1")
     }
 
     const submitStart2Click = () => {
