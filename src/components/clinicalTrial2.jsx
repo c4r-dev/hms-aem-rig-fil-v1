@@ -8,7 +8,7 @@ export default function ClinicalTrial2() {
 
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(3)
+    const [itemsPerPage] = useState(2)
 
     useEffect(() => {
         setData(Hints)
@@ -37,10 +37,10 @@ export default function ClinicalTrial2() {
                         <div>
                             <h1>RIGOR FILES</h1>
                             <p><h2>CLINICAL TRIAL FOR A NEW DRUG</h2></p>
-                            <br></br>
+                        
                             <p><h2>Interrogate the experiment: In this activity, identify
                                 all the ways the experiment could become unmasked.</h2></p>
-                            <br></br>
+                            
                             <p><h2>Guide for Creating a "Take Home" Template</h2></p>
                         </div>
                         <p><h3>Here are some hints available if you prefer to see models of types of
@@ -54,11 +54,14 @@ export default function ClinicalTrial2() {
                         <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
 
                         <div>
-                            <ul>
-                                {currentItems.map((item) => (
-                                    <li key={item.id}>{item.title}</li>
-                                ))}
-                            </ul>
+                            {currentItems.map((item) => (
+                                <div>
+                                   <h3>{item.number}. {item.hint} <br></br></h3> 
+                                  <b>Answer: {item.explanation}</b>
+                                    <br></br><br></br>
+                                </div>
+                            ))}
+
                             <Pagination
                                 totalItems={data.length}
                                 itemsPerPage={itemsPerPage}

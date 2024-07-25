@@ -9,6 +9,7 @@ export default function HintsPagination ({ totalItems, itemsPerPage, currentPage
 
   return (
     <div className="pagination">
+      <br></br>
       {[...Array(totalPages)].map((_, index) => (
         <button
           key={index}
