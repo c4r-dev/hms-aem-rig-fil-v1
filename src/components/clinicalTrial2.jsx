@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+import Hints from "../hintsScaffold3.json"
+
 export default function ClinicalTrial2() {
 
     const navigate = useNavigate();
@@ -11,7 +13,7 @@ export default function ClinicalTrial2() {
     return (
 
         <>
-            <div class="ctbackground">
+            <div className="ctbackground">
                 <div className="boxes">
                     <div className="big-box yellow">
                         <div>
@@ -31,8 +33,14 @@ export default function ClinicalTrial2() {
                             the study to help discover risk points in the space provided for your group.
                             <br></br>
                         </h3></p>
-
-
+                        <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
+                        <ul>
+                            {Hints.map((hint) => (
+                                <li key={hint.number}>
+                                    {hint.hint}
+                                </li>
+                            ))}
+                        </ul>
 
                         <br></br>
                         <br></br>
