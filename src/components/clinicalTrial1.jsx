@@ -7,7 +7,7 @@ export default function ClinicalTrial1() {
     const navigate = useNavigate();
 
     const submitStartClick = () => {
-        navigate("/")
+        navigate("/clinicalTrial2")
     }
 
     return (
