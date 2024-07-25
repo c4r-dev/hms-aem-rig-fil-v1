@@ -36,3 +36,12 @@
   background-repeat: no-repeat; /* Prevent the background from repeating */
   background-position: center; /* Center the background image */
 }
+
+.scrolling-box {
+  width: 97.5%;
+  height: 200px;
+  overflow-y: scroll; /* Allows vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  border: 1px solid #ccc;
+  padding: 10px;
+}

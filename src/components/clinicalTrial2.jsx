@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Pagination from '../components/hintsPagination';
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Hints from "../hintsScaffold.json"
+import HintsScrollingBox from "./hintsScrollingBox";
 
 export default function ClinicalTrial2() {
-
-    const [data, setData] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(2)
-
-    useEffect(() => {
-        setData(Hints)
-    }, []);
-
-
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
-    };
 
     const navigate = useNavigate();
     const submitContinueClick = () => {
@@ -54,26 +36,10 @@ export default function ClinicalTrial2() {
                         <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
 
                         <div>
-                            {currentItems.map((item) => (
-                                <div>
-                                   <h3>{item.number}. {item.hint} <br></br></h3> 
-                                  <b>Answer: {item.explanation}</b>
-                                    <br></br><br></br>
-                                </div>
-                            ))}
-
-                            <Pagination
-                                totalItems={data.length}
-                                itemsPerPage={itemsPerPage}
-                                currentPage={currentPage}
-                                onPageChange={handlePageChange}
-                            />
+                            <HintsScrollingBox />
                         </div>
-
-                        <br></br>
                         <br></br>
                         <input
-
                             type="button"
                             onClick={submitContinueClick}
                             value="CONTINUE" />
