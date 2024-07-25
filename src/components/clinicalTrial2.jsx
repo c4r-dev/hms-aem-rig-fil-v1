@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Pagination from '../components/hintsPagination';
 import { useNavigate } from "react-router-dom";
 
-import Hints from "../hintsScaffold3.json"
+import Hints from "../hintsScaffold.json"
 
 export default function ClinicalTrial2() {
 
@@ -10,7 +10,10 @@ export default function ClinicalTrial2() {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(3)
 
-    setData(Hints)
+    useEffect(() => {
+        setData(Hints)
+    }, []);
+
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;

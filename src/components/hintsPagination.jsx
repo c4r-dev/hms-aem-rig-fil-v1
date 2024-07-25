@@ -1,6 +1,6 @@
 import React from 'react';
 
-const hintsPagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => {
+export default function HintsPagination ({ totalItems, itemsPerPage, currentPage, onPageChange }) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handleClick = (page) => {
@@ -21,5 +21,3 @@ const hintsPagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }
     </div>
   );
 };
-
-export default hintsPagination;
