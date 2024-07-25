@@ -25,16 +25,29 @@ export default function ClinicalTrial1() {
                             and efficiacy of a novel drug for treating
                             hypertension The drug aims to lower blood
                             pressure without significant side effects.</h3></p>
+                        <div><h3>STUDY TEAM</h3></div>
+                        <div>Principal Investigator (PI): Dr. Emily Carter</div>
+                        <div>Research Coordinator: Sarah Patel</div>
+                        <div>Data Analyst: Dr. Mark Johnson</div>
+                        <div><h3>DATA ACCUMULATION</h3></div>
+                        <div>Blood pressure measurements (systolic and diastolic) at baselline, weekly intervals, and study endpoint</div>
+                        <div>Adverse events reporting</div>
+                        <div>Laboratory tests (e.g., kidney function, liver enzymes)</div>
+                        <div><h3>PARTICIPANTS</h3></div>
+                        <div>500 adult participants (aged 40-65) with diagnosed hypertension</div>
+                        <div>Randomly assigned to either: the experimental drug group or a placebo group</div>
+                        <div><h3>ENVIRONMENTAL CONDITIONS</h3></div>
+                        <div>Clinical research center with controlled temperature, humidity, and lighting.</div>
+                        <div>Standardized examination rooms.</div>
+                        <div>Compliance with Good Clinical Practice (GOP) guidelines.</div>
+                        <br></br>
+                        <br></br>
                         <input
                             type="button"
                             onClick={submitStartClick}
-                            value="START" />
+                            value="START ACTIVITY" />
                     </div>
                 </div>
-
-                {/* <div>
-                    <Raven4 />
-                </div> */}
             </div>
         </>
     )
