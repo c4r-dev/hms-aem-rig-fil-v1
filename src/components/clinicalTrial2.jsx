@@ -1,11 +1,26 @@
+import React, { useState } from "react";
+import Pagination from '../components/hintsPagination';
 import { useNavigate } from "react-router-dom";
 
 import Hints from "../hintsScaffold3.json"
 
 export default function ClinicalTrial2() {
 
-    const navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage] = useState(3)
 
+    setData(Hints)
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
+
+    const navigate = useNavigate();
     const submitContinueClick = () => {
         navigate("/")
     }
@@ -34,13 +49,20 @@ export default function ClinicalTrial2() {
                             <br></br>
                         </h3></p>
                         <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
-                        <ul>
-                            {Hints.map((hint) => (
-                                <li key={hint.number}>
-                                    {hint.hint}
-                                </li>
-                            ))}
-                        </ul>
+
+                        <div>
+                            <ul>
+                                {currentItems.map((item) => (
+                                    <li key={item.id}>{item.title}</li>
+                                ))}
+                            </ul>
+                            <Pagination
+                                totalItems={data.length}
+                                itemsPerPage={itemsPerPage}
+                                currentPage={currentPage}
+                                onPageChange={handlePageChange}
+                            />
+                        </div>
 
                         <br></br>
                         <br></br>
