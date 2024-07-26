@@ -7,6 +7,7 @@ import SelectPage from './components/selectPage';
 import ClinicalTrial1 from './components/clinicalTrial1';
 import ClinicalTrial2 from './components/clinicalTrial2';
 import ClinicalTrial3 from './components/clinicalTrial3';
+import FinalPage from './components/finalPage';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/clinicalTrial1" element={<ClinicalTrial1 />} />
           <Route path="/clinicalTrial2" element={<ClinicalTrial2 />} />
           <Route path="/clinicalTrial3" element={<ClinicalTrial3 />} />
+          <Route path="/finalPage" element={<FinalPage />} />
         </Routes>
       </BrowserRouter>
     </>

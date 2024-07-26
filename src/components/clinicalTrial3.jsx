@@ -11,7 +11,7 @@ export default function ClinicalTrial2() {
 
     const navigate = useNavigate();
     const submitContinueClick = () => {
-        navigate("/")
+        navigate("/finalPage")
     }
 
     return (
@@ -72,6 +72,11 @@ export default function ClinicalTrial2() {
                             type="button"
                             onClick={submitContinueClick}
                             value="DOWNLOAD as PDF" />
+
+                        <input
+                            type="button"
+                            onClick={submitContinueClick}
+                            value="CONTINUE" />
 
                         <br></br><br></br>
                     </div>
