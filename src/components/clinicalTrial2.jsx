@@ -7,7 +7,7 @@ export default function ClinicalTrial2() {
 
     const navigate = useNavigate();
     const submitContinueClick = () => {
-        navigate("/")
+        navigate("/clinicalTrial3")
     }
 
     return (
@@ -18,7 +18,7 @@ export default function ClinicalTrial2() {
                     <div className="big-box yellow">
                         <div>
                             <h1>RIGOR FILES</h1>
-                            <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
+                            <p><h2>HINTS FOR SCAFFOLD ACTIVITY (CAPTURE IDEAS AND QUESTIONS)</h2></p>
                   
                         </div>
                         <p><h3>Here are some hints available if you prefer to see models of types of
@@ -37,7 +37,7 @@ export default function ClinicalTrial2() {
                         <input
                             type="button"
                             onClick={submitContinueClick}
-                            value="CONTINUE" />
+                            value="REFERENCE TOOL" />
                     </div>
                 </div>
             </div>

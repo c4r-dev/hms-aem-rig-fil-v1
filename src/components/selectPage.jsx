@@ -35,7 +35,7 @@ export default function StartRaven() {
                     <input
                         type="button"
                         onClick={submitStart1Click}
-                        value="START" />
+                        value="SELECT CASE STUDY" />
                 </div>
                 <div className="box blue">
                     <h2>Behavioral Study on Sleep Patterns</h2>
@@ -45,7 +45,7 @@ export default function StartRaven() {
                     <input
                         type="button"
                         onClick={submitStart2Click}
-                        value="START" />
+                        value="SELECT CASE STUDY" />
                 </div>
             </div>
 

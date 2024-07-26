@@ -18,7 +18,7 @@ export default function ClinicalTrial1() {
                     <div className="big-box yellow">
                         <div>
                             <h1>RIGOR FILES</h1>
-                            <p><h2>CLINICAL TRIAL FOR A NEW DRUG</h2></p>
+                            <p><h2>CLINICAL TRIAL FOR A NEW DRUG (DISCUSSION)</h2></p>
                         </div>
                         <p><h3>A pharmaceutical company is conducting
                             a phase II clinical trial to evaluate the safety
@@ -45,7 +45,7 @@ export default function ClinicalTrial1() {
                         <input
                             type="button"
                             onClick={submitStartClick}
-                            value="START ACTIVITY" />
+                            value="CAPTURE IDEAS AND QUESTIONS" />
                     </div>
                 </div>
             </div>

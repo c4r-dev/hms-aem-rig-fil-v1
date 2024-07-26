@@ -6,7 +6,7 @@ import WelcomePage from './components/welcomePage';
 import SelectPage from './components/selectPage';
 import ClinicalTrial1 from './components/clinicalTrial1';
 import ClinicalTrial2 from './components/clinicalTrial2';
-import ClinicalTrial3 from './components/clinicalTrial99';
+import ClinicalTrial3 from './components/clinicalTrial3';
 
 export default function App() {
   return (
