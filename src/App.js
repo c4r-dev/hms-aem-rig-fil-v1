@@ -9,6 +9,8 @@ import ClinicalTrial2 from './components/clinicalTrial2';
 import ClinicalTrial3 from './components/clinicalTrial3';
 import FinalPage from './components/finalPage';
 
+import ScreenToPdf from './components/screenToPdf';
+
 export default function App() {
   return (
     <>
@@ -21,6 +23,9 @@ export default function App() {
           <Route path="/clinicalTrial2" element={<ClinicalTrial2 />} />
           <Route path="/clinicalTrial3" element={<ClinicalTrial3 />} />
           <Route path="/finalPage" element={<FinalPage />} />
+
+          <Route path="/screenToPdf" element={<ScreenToPdf />} />
+
         </Routes>
       </BrowserRouter>
     </>

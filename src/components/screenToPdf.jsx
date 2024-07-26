@@ -1,22 +1,29 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 
-export default function ClinicalTrial3() {
+const ScreenToPDF = () => {
+    const captureRef = useRef();
 
-    const [inputValue, setInputValue] = useState('')
+    const captureScreen = async () => {
+        const element = captureRef.current;
+        const canvas = await html2canvas(element);
+        const imgData = canvas.toDataURL('image/png');
 
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value)
+        const pdf = new jsPDF({
+            orientation: 'portrait',
+            unit: 'px',
+            format: [canvas.width, canvas.height]
+        });
+
+        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+        pdf.save('screenshot.pdf');
     }
 
-    const navigate = useNavigate();
-    const submitContinueClick = () => {
-        navigate("/finalPage")
-    }
 
     return (
 
-        <>
+        <div ref={captureRef} style={{ padding: 20, backgroundColor: 'white' }}>
             <div className="ctbackground">
                 <div className="boxes">
                     <div className="big-box yellow">
@@ -58,25 +65,12 @@ export default function ClinicalTrial3() {
                         <div>What other aspects of your study might pose risks of unmasking or blinding?</div>
                         <div>Create additional questions that address these unique challenges.</div>
                         <div>Consider involving your team members in brainstorming and refining these questions.</div>
-
-                        <br></br>
-                        <input
-                            type="text"
-                            value={inputValue}
-                            onChange={handleInputChange}
-                            placeholder="Custom Questions"
-                        />
-                        <br></br><br></br>
-
-                        <input
-                            type="button"
-                            onClick={submitContinueClick}
-                            value="CONTINUE" />
-
-                        <br></br><br></br>
                     </div>
                 </div>
             </div>
-        </>
+            <button onClick={captureScreen}>Capture as PDF</button>
+        </div>
     )
 }
+
+export default ScreenToPDF

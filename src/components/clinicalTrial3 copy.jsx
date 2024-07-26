@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ClinicalTrial3() {
+export default function ClinicalTrial2() {
 
     const [inputValue, setInputValue] = useState('')
 
@@ -71,6 +71,11 @@ export default function ClinicalTrial3() {
                         <input
                             type="button"
                             onClick={submitContinueClick}
+                            value="DOWNLOAD as PDF" />
+
+                        <input
+                            type="button"
+                            onClick={submitContinueClick}
                             value="CONTINUE" />
 
                         <br></br><br></br>
@@ -78,5 +83,7 @@ export default function ClinicalTrial3() {
                 </div>
             </div>
         </>
+
+
     )
 }
