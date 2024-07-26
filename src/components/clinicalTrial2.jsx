@@ -18,12 +18,8 @@ export default function ClinicalTrial2() {
                     <div className="big-box yellow">
                         <div>
                             <h1>RIGOR FILES</h1>
-                            <p><h2>CLINICAL TRIAL FOR A NEW DRUG</h2></p>
-                        
-                            <p><h2>Interrogate the experiment: In this activity, identify
-                                all the ways the experiment could become unmasked.</h2></p>
-                            
-                            <p><h2>Guide for Creating a "Take Home" Template</h2></p>
+                            <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
+                  
                         </div>
                         <p><h3>Here are some hints available if you prefer to see models of types of
                             questions that are useful when thinking about pitfalls in studies that
@@ -33,7 +29,6 @@ export default function ClinicalTrial2() {
                             the study to help discover risk points in the space provided for your group.
                             <br></br>
                         </h3></p>
-                        <p><h2>HINTS FOR SCAFFOLD ACTIVITY</h2></p>
 
                         <div>
                             <HintsScrollingBox />

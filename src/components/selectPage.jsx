@@ -26,11 +26,11 @@ export default function StartRaven() {
 
             <div className="boxes">
                 <div className="box yellow">
-                    <h2>Clinical Trial for a new drug</h2>
+                    <h2>Clinical Trial for a New Drug</h2>
                     <p><h3>A pharmaceutical company is conducting
-                        a phase II clinical trial to evaluate the safety
+                        a phase III clinical trial to evaluate the safety
                         and efficiacy of a novel drug for treating
-                        hypertension The drug aims to lower blood
+                        hypertension. The drug aims to lower blood
                         pressure without significant side effects.</h3></p>
                     <input
                         type="button"

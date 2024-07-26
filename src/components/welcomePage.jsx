@@ -14,8 +14,8 @@ export default function StartRaven() {
 
         <>
             <div>
-                <h1>RIGOR FILES</h1>
-                <h2>Welcome to The Rigor Files</h2>
+                <h1>Welcome to The Rigor Files!</h1>
+                <h2>This is a discussion activity in three parts:</h2>
                 <h2>1. Discuss the case study.</h2>
                 <h2>2. Capture ideas and questions.</h2>
                 <p><h2>3. Convert those thoughts into a reference tool
