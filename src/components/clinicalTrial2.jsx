@@ -25,8 +25,8 @@ export default function ClinicalTrial2() {
                             questions that are useful when thinking about pitfalls in studies that
                             might lead to accidental unmasking of experiments.
                             <br></br><br></br>
-                            Note your thoughts and any targeted questions you might ask about
-                            the study to help discover risk points in the space provided for your group.
+                            With your group, note your thoughts and any targeted questions you might ask about
+                            the study to help discover risk points.
                             <br></br>
                         </h3></p>
 

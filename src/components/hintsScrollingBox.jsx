@@ -9,9 +9,8 @@ export default function HintsScrollingBox() {
 
       {Hints.map((hint) => (
         <div>
-          <h3>{hint.number}. {hint.hint} <br></br></h3>
+          <h2>{hint.number}. {hint.hint} <br></br></h2>
           <b><h3>Answer: {hint.explanation}</h3></b>
-          <br></br>
         </div>
       ))}
 
