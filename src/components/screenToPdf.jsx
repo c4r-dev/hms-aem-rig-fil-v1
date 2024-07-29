@@ -3,26 +3,29 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
 const ScreenToPDF = () => {
-    const captureRef = useRef();
 
-    const captureScreen = async () => {
-        const element = captureRef.current;
-        const canvas = await html2canvas(element);
-        const imgData = canvas.toDataURL('image/png');
+    const printRef = useRef();
 
-        const pdf = new jsPDF({
-            orientation: 'portrait',
-            unit: 'px',
-            format: [canvas.width, canvas.height]
-        });
-
-        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-        pdf.save('screenshot.pdf');
-    }
+    const handlePrint = () => {
+        const input = printRef.current;
+        html2canvas(input)
+            .then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+                pdf.addImage(imgData, 'PNG', 0, 0);
+                pdf.save('download.pdf');
+            })
+            .catch(error => {
+                console.error('Error generating PDF:', error);
+            });
+    };
 
     return (
         <div>
-            <button onClick={captureScreen}>Capture as PDF</button>
+           <div ref={printRef} style={{ padding: '10px', border: '1px solid #000' }}>
+                
+            </div>
+            <button onClick={handlePrint}>Print to PDF</button>
         </div>
     )
 }

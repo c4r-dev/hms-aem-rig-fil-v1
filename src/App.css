@@ -69,3 +69,7 @@
   width: 97.5%;
   height: 20%;
 }
+
+.ulNoDot {
+  list-style-type: none;
+}

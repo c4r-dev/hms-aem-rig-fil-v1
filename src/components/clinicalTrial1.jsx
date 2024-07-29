@@ -20,13 +20,13 @@ export default function ClinicalTrial1() {
                             <h1 className="textLeft">RIGOR FILES</h1>
                         </div>
                         <div>
-                            <p><h2>CLINICAL TRIAL FOR A NEW DRUG (DISCUSSION)</h2></p>
+                            <h2>CLINICAL TRIAL FOR A NEW DRUG (DISCUSSION)</h2>
                         </div>
-                        <p><h3>A pharmaceutical company is conducting
+                        <h3>A pharmaceutical company is conducting
                             a phase II clinical trial to evaluate the safety
                             and efficiacy of a novel drug for treating
                             hypertension The drug aims to lower blood
-                            pressure without significant side effects.</h3></p>
+                            pressure without significant side effects.</h3>
                         <div><h3>STUDY TEAM</h3></div>
                         <div>Principal Investigator (PI): Dr. Emily Carter</div>
                         <div>Research Coordinator: Sarah Patel</div>

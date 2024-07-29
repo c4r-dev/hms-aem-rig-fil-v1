@@ -18,8 +18,8 @@ export default function StartRaven() {
                 <h2>This is a discussion activity in three parts:</h2>
                 <h2>1. Discuss the case study.</h2>
                 <h2>2. Capture ideas and questions.</h2>
-                <p><h2>3. Convert those thoughts into a reference tool
-                    for future self-assessment of your own experiments.</h2></p>
+                <h2>3. Convert those thoughts into a reference tool
+                    for future self-assessment of your own experiments.</h2>
             </div>
             <input
                 type="button"

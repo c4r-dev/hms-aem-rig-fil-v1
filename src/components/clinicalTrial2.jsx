@@ -25,12 +25,12 @@ export default function ClinicalTrial2() {
                         <div>
                             <h1 className="textLeft">RIGOR FILES</h1></div>
                         <div>
-                            <p><h2>CAPTURE IDEAS AND QUESTIONS</h2></p>
+                            <h2>CAPTURE IDEAS AND QUESTIONS</h2>
                         </div>
-                        <p><h3>Interrogate the experiment: In this activity, identify all the ways the experiment could become unmasked.</h3></p>
-                        <p><h3>Note your thoughts and any targeted questions you might ask about the study to help discover risk points in
+                        <h3>Interrogate the experiment: In this activity, identify all the ways the experiment could become unmasked.</h3>
+                        <h3>Note your thoughts and any targeted questions you might ask about the study to help discover risk points in
                             the space provided for your group.
-                        </h3></p>
+                        </h3>
 
                         <input className="inputBox"
                             type="text"
@@ -40,11 +40,11 @@ export default function ClinicalTrial2() {
                         />
 
 
-                        <p><h3>Here are some hints available if you prefer to see models of types of
+                        <h3>Here are some hints available if you prefer to see models of types of
                             questions that are useful when thinking about pitfalls in studies that
                             might lead to accidental unmasking of experiments.
                             <br></br>
-                        </h3></p>
+                        </h3>
 
                         <div>
                             <HintsScrollingBox />
@@ -62,7 +62,5 @@ export default function ClinicalTrial2() {
                 </div>
             </div>
         </>
-
-
     )
 }
