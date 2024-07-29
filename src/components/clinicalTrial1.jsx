@@ -13,11 +13,13 @@ export default function ClinicalTrial1() {
     return (
 
         <>
-            <div class="ctbackground">
+            <div className="ctbackground">
                 <div className="boxes">
                     <div className="big-box yellow">
                         <div>
-                            <h1>RIGOR FILES</h1>
+                            <h1 className="textLeft">RIGOR FILES</h1>
+                        </div>
+                        <div>
                             <p><h2>CLINICAL TRIAL FOR A NEW DRUG (DISCUSSION)</h2></p>
                         </div>
                         <p><h3>A pharmaceutical company is conducting

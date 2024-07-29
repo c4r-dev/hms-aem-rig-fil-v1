@@ -39,7 +39,7 @@
 
 .scrolling-box {
   width: 97.5%;
-  height: 350px;
+  height: 110px;
   overflow-y: scroll; /* Allows vertical scrolling */
   overflow-x: hidden; /* Prevents horizontal scrolling */
   border: 1px solid #ccc;
@@ -63,4 +63,9 @@
 .textLeft {
   color: black;
   text-align: left;
+}
+
+.inputBox {
+  width: 97.5%;
+  height: 20%;
 }
