@@ -1,16 +1,17 @@
 import React from 'react';
 
-import Hints from "../hintsScaffold.json"
+import RFTS from "../referenceTool.json"
 
-export default function HintsScrollingBox() {
+export default function RefToolScrollingBox() {
 
   return (
-    <div className='scrolling-box'>
+    <div className='rtscrolling-box'>
       <ul className='ulNoDot'>
-        {Hints.map((hint) => (
-          <li key={hint.number}>
-            <h3>{hint.number}. {hint.hint} <br></br></h3>
-            <b><h4>Answer: {hint.explanation}</h4></b>
+        {RFTS.map((rft) => (
+          <li key={rft.number}>
+            <h3>{rft.number}</h3>
+            <b><h4>{rft.rule1}</h4></b>
+            <b><h4>{rft.rule2}</h4></b>
           </li>
         ))}
       </ul>
