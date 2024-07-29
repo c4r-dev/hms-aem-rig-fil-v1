@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 
 import HintsScrollingBox from "./hintsScrollingBox";
-import ScreenToPDF from "./screenToPdf";
 
 export default function ClinicalTrial2() {
+
+    const printRef = useRef();
+    const handlePrint = () => {
+        const input = printRef.current;
+        html2canvas(input)
+            .then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+                pdf.addImage(imgData, 'PNG', 0, 0);
+                pdf.save('download.pdf');
+            })
+            .catch(error => {
+                console.error('Error generating PDF:', error);
+            });
+    };
 
     const [inputValue, setInputValue] = useState('');
     const handleChange = (event) => {
@@ -20,43 +36,35 @@ export default function ClinicalTrial2() {
 
         <>
             <div className="ctbackground">
-                <div className="boxes">
-                    <div className="big-box yellow">
-                        <div>
-                            <h1 className="textLeft">RIGOR FILES</h1></div>
-                        <div>
-                            <h2>CAPTURE IDEAS AND QUESTIONS</h2>
-                        </div>
-                        <h3>Interrogate the experiment: In this activity, identify all the ways the experiment could become unmasked.</h3>
-                        <h3>Note your thoughts and any targeted questions you might ask about the study to help discover risk points in
-                            the space provided for your group.
-                        </h3>
-
-                        <input className="inputBox"
-                            type="text"
-                            value={inputValue}
-                            onChange={handleChange}
-                            placeholder="Note your thoughts and any targeted questions"
-                        />
-
-
-                        <h3>Here are some hints available if you prefer to see models of types of
-                            questions that are useful when thinking about pitfalls in studies that
-                            might lead to accidental unmasking of experiments.
+                <div ref={printRef} style={{ padding: '10px', border: '1px solid #000' }}>
+                    <div className="boxes">
+                        <div className="big-box yellow">
+                            <div>
+                                <h1 className="textLeft">RIGOR FILES</h1></div>
+                            <div>
+                                <h2>CAPTURE IDEAS AND QUESTIONS</h2>
+                            </div>
+                            <h3>Interrogate the experiment: In this activity, identify all the ways the experiment could become unmasked.</h3>
+                            <h3>Note your thoughts and any targeted questions you might ask about the study to help discover risk points in
+                                the space provided for your group.
+                            </h3>
+                            <input className="inputBox"
+                                type="text"
+                                value={inputValue}
+                                onChange={handleChange}
+                                placeholder="Note your thoughts and any targeted questions"
+                            />
+                            <h3>Here are some hints available if you prefer to see models of types of
+                                questions that are useful when thinking about pitfalls in studies that
+                                might lead to accidental unmasking of experiments.
+                                <br></br>
+                            </h3>
+                            <div>
+                                <HintsScrollingBox />
+                            </div>
                             <br></br>
-                        </h3>
-
-                        <div>
-                            <HintsScrollingBox />
-                        </div>
-                        <br></br>
-                        <input
-                            type="button"
-                            onClick={submitContinueClick}
-                            value="REFERENCE TOOL" />
-                        <div>
-                            <br></br>
-                            <ScreenToPDF />
+                            <div> <button onClick={handlePrint}>Print to PDF</button></div>
+                            <div> <button onClick={submitContinueClick}>REFERENCE TOOL</button></div>
                         </div>
                     </div>
                 </div>
