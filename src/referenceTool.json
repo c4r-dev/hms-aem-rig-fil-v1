@@ -1,0 +1,18 @@
+[
+    {
+        "number": "1. INTRODUCTION",
+        "rule": "Breifly describe your experiment and its purpose. Identify any sensitive information or variables that need to remain blinded."
+    },
+    {
+        "number": "2. PARTICIPANT RECRUITMENT AND CONSENT",
+        "rule": "How will you ensure that participants are unaware of the experimental conditions? Describe your informed consent process and how it maintains blinding."
+    },
+    {
+        "number": "3. RANDOMIZATION AND ALLOCATION",
+        "rule": "How will you randomize participants into different groups or conditions?"
+    },
+    {
+        "number": "4. DATA COLLECTION AND MEASUREMENT",
+        "rule": "Specify who collects data and how they remain blinded. Detail any precations to prevent inadvertent unmasking during data collection."
+    }
+]
