@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
@@ -20,11 +20,6 @@ export default function ClinicalTrial2() {
             .catch(error => {
                 console.error('Error generating PDF:', error);
             });
-    };
-
-    const [inputValue, setInputValue] = useState('');
-    const handleChange = (event) => {
-        setInputValue(event.target.value);
     };
 
     const navigate = useNavigate();

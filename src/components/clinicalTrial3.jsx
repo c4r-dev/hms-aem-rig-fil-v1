@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import RefToolScrollingBox from "./refToolScrollingBox"
 import html2canvas from 'html2canvas';
@@ -20,11 +20,6 @@ export default function ClinicalTrial3() {
                 console.error('Error generating PDF:', error);
             });
     };
-
-    const [inputValue, setInputValue] = useState('')
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value)
-    }
 
     const navigate = useNavigate();
     const submitContinueClick = () => {
