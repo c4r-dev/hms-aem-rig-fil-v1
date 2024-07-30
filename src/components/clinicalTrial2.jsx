@@ -48,12 +48,9 @@ export default function ClinicalTrial2() {
                             <h3>Note your thoughts and any targeted questions you might ask about the study to help discover risk points in
                                 the space provided for your group.
                             </h3>
-                            <input className="inputBox"
-                                type="text"
-                                value={inputValue}
-                                onChange={handleChange}
-                                placeholder="Note your thoughts and any targeted questions"
-                            />
+                            <div className="text-box-container">
+                                <textarea className="text-box" placeholder="Note your thoughts and any targeted questions."></textarea>
+                            </div>
                             <h3>Here are some hints available if you prefer to see models of types of
                                 questions that are useful when thinking about pitfalls in studies that
                                 might lead to accidental unmasking of experiments.

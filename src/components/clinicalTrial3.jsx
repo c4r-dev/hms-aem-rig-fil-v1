@@ -47,13 +47,16 @@ export default function ClinicalTrial3() {
                                 <RefToolScrollingBox />
                             </div>
 
-                            <br></br>
-                            <input className="inputBox"
-                                type="text"
-                                value={inputValue}
-                                onChange={handleInputChange}
-                                placeholder="Custom Questions"
-                            />
+                            <div>
+                                <h3>8. Custom Questions (Your Own Reflection):</h3>
+                                <h4>a. Take a moment to think about your specific experiment and research context.</h4>
+                                <h4>b. What other aspects of your study might pose risks of unmasking or blinding?</h4>
+                                <h4>c. Create additional questions that address these unique challenges.</h4>
+                                <h4>d. Consider involving your team members in brainstorming and refining these questions.</h4>
+                            </div>
+                            <div className="text-box-container">
+                                <textarea className="text-box" placeholder="Note your thoughts and any targeted questions."></textarea>
+                            </div>
                             <br></br>
                             <div> <button onClick={handlePrint}>Print to PDF</button></div>
                             <div> <button onClick={submitContinueClick}>CONTINUE</button></div>
