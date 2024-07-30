@@ -12,6 +12,14 @@
   text-align: center;
 }
 
+.slim-box {
+  width: 100px;
+  height: 700px;
+  color: black;
+  font-size: 15px;
+  text-align: center;
+}
+
 .big-box {
   width: 900px;
   height: 700px;
