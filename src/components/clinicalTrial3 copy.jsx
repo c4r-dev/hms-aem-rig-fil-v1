@@ -1,16 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import RefToolScrollingBox from "./refToolScrollingBox"
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
 export default function ClinicalTrial3() {
-
-    const [isVisible, setIsVisible] = useState(false);
-
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible)
-    };
 
     const printRef = useRef();
     const handlePrint = () => {
@@ -43,14 +37,11 @@ export default function ClinicalTrial3() {
                                 <h1 className="textLeft">RIGOR FILES</h1>
                                 <p><h2>Guide for Creating a "Take Home" Template (REFERENCE TOOL)</h2></p>
                             </div>
-                            <button onClick={toggleVisibility}>
-                                {isVisible ? 'HIDE ' : 'SHOW '} RULES
-                            </button>
-                            {isVisible && (
-                                <div>
-                                    <RefToolScrollingBox />
-                                </div>
-                            )}
+
+                            <div>
+                                <RefToolScrollingBox />
+                            </div>
+
                             <div>
                                 <h3>8. Custom Questions (Your Own Reflection):</h3>
                                 <h4>a. Take a moment to think about your specific experiment and research context.</h4>
@@ -63,8 +54,8 @@ export default function ClinicalTrial3() {
                             </div>
                             <br></br>
                             <div> <button onClick={handlePrint}>Print to PDF</button></div>
-                            <br></br>
                             <div> <button onClick={submitContinueClick}>CONTINUE</button></div>
+                            <br></br><br></br>
                         </div>
                     </div>
                 </div>

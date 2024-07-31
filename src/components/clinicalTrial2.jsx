@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
@@ -6,6 +6,12 @@ import { jsPDF } from 'jspdf';
 import HintsScrollingBox from "./hintsScrollingBox";
 
 export default function ClinicalTrial2() {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible)
+    };
 
     const printRef = useRef();
     const handlePrint = () => {
@@ -77,11 +83,17 @@ export default function ClinicalTrial2() {
                                 might lead to accidental unmasking of experiments.
                                 <br></br>
                             </h3>
-                            <div>
-                                <HintsScrollingBox />
-                            </div>
-                            <br></br>
+                            <button onClick={toggleVisibility}>
+                                {isVisible ? 'HIDE ' : 'SHOW '} HINTS
+                            </button>
+                            {isVisible && (
+                                <div>
+                                    <HintsScrollingBox />
+                                </div>
+                            )}
+                            <br></br><br></br>
                             <div> <button onClick={handlePrint}>Print to PDF</button></div>
+                            <br></br>
                             <div> <button onClick={submitContinueClick}>REFERENCE TOOL</button></div>
                         </div>
                     </div>
