@@ -41,10 +41,10 @@ export default function ClinicalTrial3() {
                         <div className="big-box yellow">
                             <div>
                                 <h1 className="textLeft">RIGOR FILES</h1>
-                                <p><h2>Guide for Creating a "Take Home" Template (REFERENCE TOOL)</h2></p>
+                                <h2>Guide for Creating a "Take Home" Template (REFERENCE TOOL)</h2>
                             </div>
                             <button onClick={toggleVisibility}>
-                                {isVisible ? 'HIDE ' : 'SHOW '} RULES
+                                {isVisible ? 'HIDE ' : 'SHOW '} CHECKLIST
                             </button>
                             {isVisible && (
                                 <div>
