@@ -38,7 +38,7 @@ export default function ClinicalTrial3() {
             <div className="ctbackground">
                 <div ref={printRef} style={{ padding: '10px', border: '1px solid #000' }}>
                     <div className="boxes">
-                        <div className="big-box yellow">
+                        <div className="big-box blue">
                             <div>
                                 <h1 className="textLeft">RIGOR FILES</h1>
                                 <h2>Guide for Creating a "Take Home" Template (REFERENCE TOOL)</h2>
